@@ -4,7 +4,7 @@
 vim.pack.add { 'https://github.com/toreerdmann/send-to-repl.nvim' }
 
 require('send-to-repl').setup {
-  bracketed_paste = true,
+  bracketed_paste = false,
   layout = {
     split = 'vertical',
     size = 0.4,
