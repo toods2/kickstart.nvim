@@ -171,6 +171,11 @@ do
   -- instead raise a dialog asking if you wish to save the current file(s)
   -- See `:help 'confirm'`
   vim.o.confirm = true
+
+  -- Set tabs
+  vim.opt.tabstop = 4
+  vim.opt.shiftwidth = 4
+
 end
 
 -- Use a detached background job to open links/files, so it never
@@ -258,6 +263,12 @@ do
     group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
     callback = function() vim.hl.on_yank() end,
   })
+
+  -- Add custom keymaps for R stuff
+  vim.keymap.set("i", "<S-Tab>", " |>", { desc = "Insert Native R Pipe" })
+  vim.keymap.set("i", "<C-->", " <- ", { desc = "Insert R Assign Operator" })
+  vim.keymap.set("i", "<C-b>", "```", { desc = "Insert Code Block" })
+  vim.keymap.set("i", "<C-r>", "```{r}", { desc = "Insert R Code Block" })
 end
 
 -- ============================================================
@@ -984,7 +995,7 @@ do
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
   -- require 'kickstart.plugins.debug'
-  -- require 'kickstart.plugins.indent_line'
+  require 'kickstart.plugins.indent_line'
   -- require 'kickstart.plugins.lint'
   require 'kickstart.plugins.autopairs'
   -- require 'kickstart.plugins.neo-tree'
