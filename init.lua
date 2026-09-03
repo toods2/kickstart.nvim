@@ -175,6 +175,8 @@ do
   -- Set tabs
   vim.opt.tabstop = 4
   vim.opt.shiftwidth = 4
+  vim.opt.expandtab = true
+  vim.opt.softtabstop = 4
 
 end
 
@@ -356,14 +358,6 @@ do
   --
   -- For most plugins its not enough to install them, you also need to call their `.setup()` to start them.
   --
-  -- For example, lets say we want to install `guess-indent.nvim` - a plugin for
-  -- automatically detecting and setting the indentation.
-  --
-  -- We first install it from https://github.com/NMAC427/guess-indent.nvim
-  -- and then call its `setup()` function to start it with default settings.
-  vim.pack.add { gh 'NMAC427/guess-indent.nvim' }
-  require('guess-indent').setup {}
-
   -- Here is a more advanced configuration example that passes options to `gitsigns.nvim`
   --
   -- See `:help gitsigns` to understand what each configuration key does.
