@@ -268,9 +268,9 @@ do
 
   -- Add custom keymaps for R stuff
   vim.keymap.set("i", "<S-Tab>", " |>", { desc = "Insert Native R Pipe" })
-  vim.keymap.set("i", "<C-->", " <- ", { desc = "Insert R Assign Operator" })
-  vim.keymap.set("i", "<C-b>", "```", { desc = "Insert Code Block" })
-  vim.keymap.set("i", "<C-r>", "```{r}", { desc = "Insert R Code Block" })
+  vim.keymap.set("i", "<M-->", " <- ", { desc = "Insert R Assign Operator" })
+  vim.keymap.set("i", "<M-b>", "```", { desc = "Insert Code Block" })
+  vim.keymap.set("i", "<M-r>", "```{r}", { desc = "Insert R Code Block" })
 end
 
 -- ============================================================
